@@ -40,3 +40,61 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navBar = siteContent.nav;
+let navItem = document.querySelectorAll('a');
+
+// ask about for loop or forEach.
+
+
+let navBarBits = Object.values(navBar);
+
+for (let i = 0; i < 6; i++) {
+  navItem[i].textContent = navBarBits[i];
+}
+
+
+let ctaTitle = document.querySelector('.cta-text h1');
+ctaTitle.textContent = siteContent.cta['h1'];
+
+let ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent.cta['button'];
+
+let ctaImage = document.querySelector('.cta img');
+ctaImage.src = 'img/header-img.png';
+
+// main content
+
+let mainContent = siteContent["main-content"];
+
+let midImg = document.querySelector('#middle-img');
+midImg.src = 'img/mid-page-accent.jpg';
+
+let hContent = document.querySelectorAll('.main-content h4');
+hContent[0].textContent = mainContent['features-h4'];
+hContent[1].textContent = mainContent['about-h4'];
+hContent[2].textContent = mainContent['services-h4'];
+hContent[3].textContent = mainContent['product-h4'];
+hContent[4].textContent = mainContent['vision-h4'];
+
+let pContent = document.querySelectorAll('.main-content p');
+pContent[0].textContent = mainContent['features-content'];
+pContent[1].textContent = mainContent['about-content'];
+pContent[2].textContent = mainContent['services-content'];
+pContent[3].textContent = mainContent['product-content'];
+pContent[4].textContent = mainContent['vision-content'];
+
+// Contact & footer
+
+let contactContent = siteContent["contact"];
+
+let contactHContent = document.querySelector('.contact h4');
+contactHContent.textContent = contactContent['contact-h4'];
+
+let contactPContent = document.querySelectorAll('.contact p');
+contactPContent[0].textContent = contactContent['address'];
+contactPContent[1].textContent = contactContent['phone'];
+contactPContent[2].textContent = contactContent['email'];
+
+let footerC = document.querySelector('footer p');
+footerC.textContent = siteContent["footer"]["copyright"];
