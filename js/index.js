@@ -98,3 +98,20 @@ contactPContent[2].textContent = contactContent['email'];
 
 let footerC = document.querySelector('footer p');
 footerC.textContent = siteContent["footer"]["copyright"];
+
+// Change Nav Bar
+
+const parentElement = document.querySelector('nav');
+const newNavItem = document.createElement('a');
+const newNavItem2 = document.createElement('a');
+newNavItem.textContent = 'Buy';
+newNavItem2.textContent = 'Sell';
+
+parentElement.prepend(newNavItem);
+parentElement.append(newNavItem2);
+
+for (let i = 0; i < 6; i++) {
+  navItem[i].style.color = 'green';
+}
+newNavItem.style.color = 'green';
+newNavItem2.style.color = 'green';
